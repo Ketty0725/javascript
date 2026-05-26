@@ -1,0 +1,14 @@
+#!name = 芒果TV iPad 解锁会员
+#!author = 怎么肥事
+#!update = 2026-05-26
+
+[rewrite_local]
+
+# iPad 播放接口
+^https?:\/\/pad\.api\.mgtv\.com\/v8\/video\/getSource url script-request-header https://raw.githubusercontent.com/Ketty0725/javascript/refs/heads/main/mgtv/mgtv_pad_vip.js
+
+# 屏蔽 VIP 状态上报
+^https?:\/\/crd\.api\.mgtv\.com\/report\/user_rec url reject
+
+[mitm]
+hostname = pad.api.mgtv.com, crd.api.mgtv.com
