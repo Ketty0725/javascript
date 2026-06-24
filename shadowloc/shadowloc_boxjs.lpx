@@ -1,0 +1,11 @@
+#!name=ShadowLoc 
+#!desc=Apple修改定位，免越狱，免巨魔，免签名，防检测；经纬度从 BoxJS 读取。
+#!author=Mr.Eric
+#!homepage=https://t.me/Mr_Alex
+#!system=ios
+
+[Script]
+http-response ^https:\/\/gs-loc(-cn)?\.apple\.com\/clls\/wloc script-path=https://gist.githubusercontent.com/Alex0510/7ed4870c681db4e99cc770f947c70e10/raw/shadowloc_boxjs.js, requires-body=true, binary-body-mode=true, timeout=30, tag=ShadowLoc
+
+[MITM]
+hostname = gs-loc.apple.com, gs-loc-cn.apple.com
